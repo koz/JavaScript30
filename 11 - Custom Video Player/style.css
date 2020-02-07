@@ -98,10 +98,9 @@ body {
 }
 
 .progress__filled {
-  width: 50%;
   background: #ffc600;
   flex: 0;
-  flex-basis: 50%;
+  transition: flex-basis 150ms ease;
 }
 
 /* unholy css to style input type="range" */
@@ -140,6 +139,7 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #bada55;
+  width: 10%;
 }
 
 input[type=range]::-moz-range-track {
