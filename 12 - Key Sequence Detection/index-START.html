@@ -7,6 +7,21 @@
 </head>
 <body>
 <script>
+  const codeSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+  let currentSequence = []
+
+  document.addEventListener('keyup', (e) => {
+    currentSequence.push(e.keyCode)
+    const currentIndex = currentSequence.length - 1
+    if (currentSequence[currentIndex] !== codeSequence[currentIndex]) {
+      currentSequence = [];
+    }
+
+    if (currentSequence.length === codeSequence.length) {
+      cornify_add();
+      currentSequence = [];
+    }
+  })
 </script>
 </body>
 </html>
